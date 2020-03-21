@@ -1,0 +1,6 @@
+version: "3"
+services:
+  codelabs:
+    image: conacyt/codelabs
+    ports:
+      - 8085:80

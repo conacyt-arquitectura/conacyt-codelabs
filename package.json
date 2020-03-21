@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "name": "conacyt-codelabs",
+  "version": "1.0.0",
+  "description": "Tutoriales codelabs de CONACYT",
+  "main": "index.js",
+  "scripts": {
+    "fetch": "node scripts/fetch.js",
+    "push": "node scripts/commit-push.js",
+    "build": "./scripts/codelabs-build.sh",
+    "docker:build": "docker build -t conacyt/codelabs:$npm_package_version -t conacyt/codelabs:latest .",
+    "docker:publish": "\"Publica el nuevo contenedor en el registry\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conacyt-arquitectura/conacyt-codelabs.git"
+  },
+  "keywords": [
+    "codelabs",
+    "conacyt"
+  ],
+  "author": "Roberto Villarejo Martínez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/conacyt-arquitectura/conacyt-codelabs/issues"
+  },
+  "homepage": "https://github.com/conacyt-arquitectura/conacyt-codelabs#readme",
+  "dependencies": {
+    "fs-extra": "^9.0.0",
+    "nodegit": "^0.26.5",
+    "tmp": "^0.1.0",
+    "versiony": "^2.0.1"
+  }
+}
